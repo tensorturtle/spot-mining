@@ -52,6 +52,13 @@ ExecStart=/home/ubuntu/NBMiner_Linux/start_rvn.sh
 WantedBy=multi-user.target
 ```
 
+Make sure this starts on boot
+```
+sudo systemctl daemon-reload
+sudo systemctl enable nbminer.service
+sudo systemctl start nbminer.service
+```
+
 # Reconnecting after Interruption
 
 The above configuration ensures that even if this spot instance is interrupted, it should start mining again once it automatically comes back.
