@@ -15,6 +15,8 @@ In `Instance type requirements` tick `Manually select instance types`. Delete pr
 
 # Instance Initial Setup
 
+## NBMiner for Raven (RVN)
+
 Install NBMiner: https://github.com/NebuTech/NBMiner
 
 Download `NBMiner_42.3_Linux.tgz`:
@@ -74,6 +76,57 @@ Monitor the process:
 ```
 sudo journalctl --follow -u nbminer.service
 ```
+
+## lolMiner for Nexa
+
+```
+cd ~
+wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.84/lolMiner_v1.84_Lin64.tar.gz
+tar -xvf lolMiner_v1.84_Lin64.tar.gz
+mv 1.84 lolMiner
+cd lolMiner
+sudo cp lolMiner /usr/bin
+```
+Create a `mine_nexa_2miners.sh`:
+```
+vim mine_nexa_2miners.sh
+```
+It should look something like:
+```
+#!/bin/bash
+lolMiner --algo NEXA --pool nexa.2miners.com:5050 --user nexa:nqtsq5g5vld08wyr26uxhqml9jczc2x2ldgf0kn4vhpj5mam.aws-seoul-p3
+```
+To persist this program, create a systemd service.
+```
+sudo vim /etc/systemd/system/lolminer.service
+```
+And copy-paste:
+```
+[Unit]
+Description=lolMiner Nexa
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/ubuntu/lolMiner/mine_nexa_2miners.sh
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Make sure this starts on boot
+```
+sudo systemctl daemon-reload
+sudo systemctl enable lolminer.service
+sudo systemctl start lolminer.service
+```
+
+Monitor the process:
+```
+sudo journalctl --follow -u lolminer.service
+```
+
+
 
 # Reconnecting after Interruption
 
