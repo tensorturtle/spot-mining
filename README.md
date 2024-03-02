@@ -33,6 +33,13 @@ sudo cp nbminer /usr/bin
 ```
 
 Edit `start_rvn.sh` with your pool URL and wallet ID. Also, remove the `./` in front of `nbminer` since we put it on PATH already.
+Also, add `#!/bin/bash` at the top.
+
+It should now look something like:
+```
+#!/bin/bash
+nbminer -a kawpow -o stratum+tcp://asia-rvn.2miners.com:6060 -u RPB59KtYQbfFVVV5hkFHYSSctypbSLRhtd.aws-seoul-p4-ondemand
+```
 
 To persist this program, create a systemd service.
 ```
