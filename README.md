@@ -65,6 +65,7 @@ ExecStart=/home/ubuntu/NBMiner_Linux/start_rvn.sh
 WantedBy=multi-user.target
 ```
 
+
 Make sure this starts on boot
 ```
 sudo systemctl daemon-reload
@@ -96,6 +97,10 @@ It should look something like:
 #!/bin/bash
 lolMiner --algo NEXA --pool nexa.2miners.com:5050 --user nexa:nqtsq5g5vld08wyr26uxhqml9jczc2x2ldgf0kn4vhpj5mam.aws-seoul-p3
 ```
+Give it execution privilege:
+```
+sudo chmod +x mine_nexa_2miners.sh
+```
 To persist this program, create a systemd service.
 ```
 sudo vim /etc/systemd/system/lolminer.service
@@ -113,6 +118,7 @@ ExecStart=/home/ubuntu/lolMiner/mine_nexa_2miners.sh
 [Install]
 WantedBy=multi-user.target
 ```
+
 
 Make sure this starts on boot
 ```
