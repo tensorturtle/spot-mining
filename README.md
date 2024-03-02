@@ -66,6 +66,11 @@ sudo systemctl enable nbminer.service
 sudo systemctl start nbminer.service
 ```
 
+Monitor the process:
+```
+sudo journalctl --follow -u nbminer.service
+```
+
 # Reconnecting after Interruption
 
 The above configuration ensures that even if this spot instance is interrupted, it should start mining again once it automatically comes back.
