@@ -20,7 +20,7 @@ Install NBMiner: https://github.com/NebuTech/NBMiner
 Download `NBMiner_42.3_Linux.tgz`:
 ```
 wget https://dl.nbminer.com/NBMiner_42.3_Linux.tgz
-tar -xvf NBMiner_42.4_Linux.tgz
+tar -xvf NBMiner_42.3_Linux.tgz
 ```
 
 ```
