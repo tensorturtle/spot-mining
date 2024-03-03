@@ -44,7 +44,7 @@ vim start_rvn.sh
 It should now look something like:
 ```
 #!/bin/bash
-nbminer -a kawpow -o stratum+tcp://asia-rvn.2miners.com:6060 -u RPB59KtYQbfFVVV5hkFHYSSctypbSLRhtd.aws-seoul-rvn-ondemand-g4dn-1
+nbminer -a kawpow -o stratum+tcp://asia-rvn.2miners.com:6060 -u RPB59KtYQbfFVVV5hkFHYSSctypbSLRhtd.aws-seoul-rvn-spot-p2-1
 ```
 
 To persist this program, create a systemd service.
