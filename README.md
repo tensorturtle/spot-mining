@@ -1,5 +1,6 @@
 # spot-mining
-Playbook for RVN mining on AWS EC2 spot instances
+Playbook for RVN mining on AWS EC2 spot instances.
+Highly uneconomical.
 
 # Infrastructure Setup
 
