@@ -4,6 +4,19 @@ Highly uneconomical.
 
 # Infrastructure Setup
 
+Shortcut:
+```
+curl -L https://raw.githubusercontent.com/tensorturtle/spot-mining/main/rvn_script.sh -o rvn_script.sh
+sudo chmod +x rvn_script.sh
+```
+Then run
+```
+./rvn_script.sh 1
+```
+where 1 is the number of the device.
+
+
+
 We use Ohio: `us-east-2` region.
 
 Go to AWS Console -> EC2 -> Spot Requests -> `Request Spot Instances`
