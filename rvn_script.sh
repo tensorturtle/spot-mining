@@ -11,7 +11,7 @@ rm $filename
 
 # Use the echo command and redirection to write lines to the file
 echo "#!/bin/bash" > $filename
-echo "nbminer -a kawpow -o stratum+tcp://asia-rvn.2miners.com:6060 -u RPB59KtYQbfFVVV5hkFHYSSctypbSLRhtd.aws-us-east-1-rvn-spot-g5-$0" >> $filename
+echo "nbminer -a kawpow -o stratum+tcp://us-rvn.2miners.com:6060 -u RPB59KtYQbfFVVV5hkFHYSSctypbSLRhtd.aws-us-east-1-rvn-spot-g5-$0" >> $filename
 
 # Make the script executable
 chmod +x $filename
