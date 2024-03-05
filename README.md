@@ -6,7 +6,7 @@ Highly uneconomical.
 
 Shortcut:
 ```
-curl -H 'Cache-Control: no-cache, no-store' -L https://raw.githubusercontent.com/tensorturtle/spot-mining/main/rvn_script.sh -o rvn_script.sh
+curl -L https://raw.githubusercontent.com/tensorturtle/spot-mining/main/rvn_script.sh -o rvn_script.sh
 sudo chmod +x rvn_script.sh
 ```
 Then run
