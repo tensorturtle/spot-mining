@@ -11,11 +11,10 @@ sudo chmod +x rvn_script.sh
 ```
 Then run
 ```
-./rvn_script.sh 1
+./rvn_script.sh
 ```
-where 1 is the number of the device.
-
-
++ We use nanoseconds as a proxy for random numbers (accessing /dev/urandom causes problems when run as systemd service)
++ The system as configured can be an EC2 AMI, and spot instances launched from it will automatically be configured.
 
 We use Ohio: `us-east-2` region.
 
