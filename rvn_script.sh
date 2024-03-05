@@ -11,7 +11,8 @@ rm $filename
 
 # Use the echo command and redirection to write lines to the file
 echo "#!/bin/bash" > $filename
-echo "nbminer -a kawpow -o stratum+tcp://us-rvn.2miners.com:6060 -u RPB59KtYQbfFVVV5hkFHYSSctypbSLRhtd.aws-nv-spot-g5-$1" >> $filename
+random_string=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 10 | head -n 1)
+echo "nbminer -a kawpow -o stratum+tcp://us-rvn.2miners.com:6060 -u RPB59KtYQbfFVVV5hkFHYSSctypbSLRhtd.aws-$random_string" >> $filename
 
 # Make the script executable
 chmod +x $filename
